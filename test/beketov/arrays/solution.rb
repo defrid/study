@@ -2,7 +2,7 @@ module Beketov
   module Arrays
     class << self
       def replace(array)
-        max = array.reduce { |prev, cur| cur > prev ? cur : prev }
+        max = array.max
         array.map { |el| el > 0 ? max : el }
       end
 
