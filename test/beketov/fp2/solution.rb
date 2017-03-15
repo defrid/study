@@ -14,7 +14,7 @@ module Beketov
 
       # Написать свою функцию my_map
       def my_map
-        result = MyArray.new([])
+        result = MyArray.new
         my_each do |element|
           result << yield(element)
         end
@@ -23,7 +23,7 @@ module Beketov
 
       # Написать свою функцию my_compact
       def my_compact
-        my_reduce(MyArray.new([])) do |acc, element|
+        my_reduce(MyArray.new) do |acc, element|
           acc << element unless element.nil?
           acc
         end
